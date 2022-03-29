@@ -1,0 +1,8 @@
+#管理员权限清除内存
+echo 1 > /proc/sys/vm/drop_caches
+
+
+
+
+
+
