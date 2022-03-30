@@ -2,8 +2,9 @@
 sudo -i
 echo 1 > /proc/sys/vm/drop_caches
 
-
-
+#修改文件夹权限
+sudo chown -R yinjiaying /data1/yinjiaying/X101SC21043651-Z01/X101SC21043651-Z01-J001
+sudo chgrp -R yinjiaying /data1/yinjiaying/X101SC21043651-Z01/X101SC21043651-Z01-J001
 
 
 
