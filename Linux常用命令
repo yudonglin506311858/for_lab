@@ -6,5 +6,12 @@ echo 1 > /proc/sys/vm/drop_caches
 sudo chown -R yinjiaying /data1/yinjiaying/X101SC21043651-Z01/X101SC21043651-Z01-J001
 sudo chgrp -R yinjiaying /data1/yinjiaying/X101SC21043651-Z01/X101SC21043651-Z01-J001
 
+#cellranger运行代码
+export PATH=/data/yudonglin/software/cellranger-4.0.0:$PATH
+cellranger count --id=ter119positive --transcriptome=/data/yudonglin/velocity/refdata-gex-mm10-2020-A --fastqs=/data/yudonglin/zyy/ter119positive/ --sample=Tjia --localcores=30
+
+#RNA速率分析
+conda activate velocity
+velocyto run10x -m /data/yudonglin/velocity/mm10_rmsk.gtf /data1/yudonglin_data/ter119positive/  /data/yudonglin/velocity/refdata-gex-mm10-2020-A/genes/genes.gtf
 
 
